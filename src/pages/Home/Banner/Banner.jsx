@@ -14,7 +14,7 @@ const Banner = () => {
           <img src={avg1} className="w-full md:h-[500px]" />
 
           <div className="absolute flex justify-between gap-4 w-full h-full top-0 left-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
-            <div className="w-[50%] mx-auto md:mt-[10%] md:pl-10">
+            <div className="w-[50%] mx-auto mt-6 md:mt-[10%] md:pl-10">
               <h1 className="text-stone-200 text-2xl md:text-5xl md:my-10 font-bold">
                 WELCOME TO <span className="text-yellow-200">BATTLEHEROES</span>{" "}
                 TOY CITY
@@ -55,7 +55,7 @@ const Banner = () => {
           <img src={avg2} className="w-full md:h-[500px]" />
           <div className="absolute flex justify-between gap-4 w-full h-full top-0 left-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
             <div className="w-[50%] mx-auto md:mt-[10%] md:pl-10">
-              <h1 className="text-stone-200 text-2xl md:text-5xl md:my-10 font-bold">
+              <h1 className="text-stone-200 mt-6 text-2xl md:text-5xl md:my-10 font-bold">
                 WELCOME TO <span className="text-yellow-200">BATTLEHEROES</span>{" "}
                 TOY CITY
               </h1>
@@ -94,8 +94,8 @@ const Banner = () => {
         <div id="slide3" className="carousel-item relative w-full">
           <img src={avg3} className="w-full md:h-[500px]" />
           <div className="absolute flex justify-between gap-4 w-full h-full top-0 left-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
-            <div className="w-[50%] mx-auto md:mt-[10%] md:pl-10">
-              <h1 className="text-stone-200 text-2xl md:text-5xl md:my-10 font-bold">
+            <div className="w-[50%] mx-auto mt-6 md:mt-[10%] md:pl-10">
+              <h1 className="text-stone-200  text-2xl md:text-5xl md:my-10 font-bold">
                 WELCOME TO <span className="text-yellow-200">BATTLEHEROES</span>{" "}
                 TOY CITY
               </h1>
@@ -135,7 +135,7 @@ const Banner = () => {
         <div id="slide4" className="carousel-item relative w-full">
           <img src={avg4} className="w-full md:h-[500px]" />
           <div className="absolute flex justify-between gap-4 w-full h-full top-0 left-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
-            <div className="w-[50%] mx-auto md:mt-[10%] md:pl-10">
+            <div className="w-[50%] mx-auto mt-6 md:mt-[10%] md:pl-10">
               <h1 className="text-stone-200 text-2xl md:text-5xl md:my-10 font-bold">
                 WELCOME TO <span className="text-yellow-200">BATTLEHEROES</span>{" "}
                 TOY CITY
