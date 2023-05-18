@@ -15,8 +15,8 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-slate-100 p-4 shadow">
-      <div className="max-w-[1200px] py-5 flex justify-between items-center mx-auto">
+    <div className="">
+      <div className="max-w-[1200px] p-5 mb-4 flex justify-between items-center mx-auto shadow">
         <div className="flex gap-3 items-center">
           <img className="w-12 h-12 rounded-full" src="https://pbs.twimg.com/profile_images/1466072342816243718/9A_DD3bJ_400x400.png" alt="" />
           <p className="text-xl font-bold">BattleHeroes</p></div>
