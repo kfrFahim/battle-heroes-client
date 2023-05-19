@@ -18,8 +18,13 @@ const Navbar = () => {
     <div className="">
       <div className="max-w-[1200px] p-5 mb-4 flex justify-between items-center mx-auto shadow">
         <div className="flex gap-3 items-center">
-          <img className="w-12 h-12 rounded-full" src="https://pbs.twimg.com/profile_images/1466072342816243718/9A_DD3bJ_400x400.png" alt="" />
-          <p className="text-xl font-bold">BattleHeroes</p></div>
+          <img
+            className="w-12 h-12 rounded-full"
+            src="https://pbs.twimg.com/profile_images/1466072342816243718/9A_DD3bJ_400x400.png"
+            alt=""
+          />
+          <p className="text-xl font-bold">BattleHeroes</p>
+        </div>
 
         {toogle ? (
           <FaRegWindowClose
@@ -34,19 +39,27 @@ const Navbar = () => {
         )}
 
         <ul className="hidden md:flex items-center gap-10 font-medium text-base">
-
-          <li><Link to="/" className={({ isActive }) => isActive ? "bg-blue-600 px-5 py-2 text-white rounded-lg": "default" }> Home </Link> </li>
+          <li>
+            <Link
+              to="/"
+            >Home
+            </Link>
+          </li>
           {user?.email ? (
             <>
-              <li>All Toys</li>
+              <li>
+                <Link to="/alltoys">All Toys</Link>
+              </li>
               <li> My Toys</li>
-              <li> Add A Toy</li>
+              <li> <Link to="/addtoy">Add A Toy</Link></li>
             </>
           ) : (
             ""
           )}
 
-          <li><Link to="/blogs" > Blogs </Link> </li>
+          <li>
+            <Link to="/blogs"> Blogs </Link>{" "}
+          </li>
         </ul>
 
         {user?.email ? (

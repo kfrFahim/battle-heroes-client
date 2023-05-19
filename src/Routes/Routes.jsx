@@ -3,6 +3,8 @@ import Main from "../Layouts/Main";
 import Home from "../pages/Home/Home/Home";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
+import Alltoys from "../pages/AllToys/Alltoys";
+import AddToy from "../pages/AddToy/AddToy";
 
 const router = createBrowserRouter([
      {
@@ -12,6 +14,14 @@ const router = createBrowserRouter([
                {
                     path:"/",
                     element:<Home></Home>
+               },
+               {
+                    path:"/alltoys",
+                    element:<Alltoys></Alltoys>
+               },
+               {
+                    path:"/addtoy",
+                    element:<AddToy></AddToy>
                }
           ]
      },
