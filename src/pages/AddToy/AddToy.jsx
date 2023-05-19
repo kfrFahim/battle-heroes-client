@@ -35,10 +35,10 @@ const AddToy = () => {
       
       <input className='text-black font-semibold rounded shadow border border-gray-400 bg-gray-200  p-3' value={user?.name} placeholder='Seller Name' defaultValue="" {...register("seller-name")} />
 
-      <input className='text-black font-semibold rounded shadow border border-gray-400 bg-gray-200  p-3' placeholder='Photo URL' defaultValue="" {...register("photo-url")} />
+      <input className='text-black font-semibold rounded shadow border border-gray-400 bg-gray-200  p-3' placeholder='Photo URL' defaultValue="" {...register("photoURL")} />
       
       {/* include validation with required or other standard HTML validation rules */}
-      <input type='email' value={user?.email} className='text-black font-semibold rounded shadow border border-gray-400 bg-gray-200  p-3' placeholder='Email'   {...register("posted-by", { required: true })} />
+      <input type='email' value={user?.email} className='text-black font-semibold rounded shadow border border-gray-400 bg-gray-200  p-3' placeholder='Email'   {...register("postedBy", { required: true })} />
 
       <select className='text-black font-semibold rounded shadow border border-gray-400 bg-gray-200  p-3' placeholder='Toy Category' {...register("toy-category")}>
         <option value="avengers">Avengers</option>
