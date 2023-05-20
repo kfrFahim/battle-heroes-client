@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
+import { Link } from 'react-router-dom';
 
 const MyToys = () => {
 
@@ -90,7 +91,7 @@ const MyToys = () => {
                     </td>
                     <td>{mytoy.price}</td>
                     <td>{mytoy.quantity}</td>
-                    <td> <button className="btn btn-secondary btn-xs">Update</button></td>
+                    <td> <Link to={`/update/${mytoy._id}`}><button className="btn btn-secondary btn-xs">Update</button></Link></td>
                     <td> <button onClick={()=> handleDelete(mytoy._id)} className="btn btn-accent btn-xs">Delete</button></td>
                   </tr>
                ) )

@@ -8,6 +8,7 @@ import AddToy from "../pages/AddToy/AddToy";
 import MyToys from "../pages/MyToys/MyToys";
 import PrivateRoute from "./PrivateRoute";
 import Error from "../pages/Error/Error";
+import UpdateToy from "../pages/UpdateToy/UpdateToy";
 
 const router = createBrowserRouter([
      {
@@ -39,6 +40,11 @@ const router = createBrowserRouter([
      {
           path:"/signup",
           element:<SignUp></SignUp>
+     },
+     {
+          path:"/update/:id",
+          element:<UpdateToy></UpdateToy>,
+          loader:({params})=> fetch(`http://localhost:5000/update/${params.id}`)
      },
      {
           path:"*",
