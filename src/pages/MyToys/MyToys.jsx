@@ -13,7 +13,18 @@ const MyToys = () => {
      },[user])
 
 
-
+      const handleDelete = (id) => {
+          const proceed = confirm("Are you sure you want to delete ?");
+          if(proceed){
+            fetch(`http://localhost:5000/mytoys/${id}`, {
+              method:"DELETE"
+            })
+            .then(res => res.json())
+            .then(data => {
+              console.log(data);
+            })
+          }
+      }
 
      return (
           <div className='max-w-[1200px] mx-auto'>
@@ -54,7 +65,7 @@ const MyToys = () => {
       {/* row 1 */}
                {
                mytoys.map(mytoy => (
-                    <tr>
+                    <tr key={mytoy._id}>
                     <th>
                       <label>
                         <input type="checkbox" className="checkbox" />
@@ -78,7 +89,7 @@ const MyToys = () => {
                     <td>{mytoy.price}</td>
                     <td>{mytoy.quantity}</td>
                     <td> <button className="btn btn-secondary btn-xs">Update</button></td>
-                    <td> <button className="btn btn-accent btn-xs">Delete</button></td>
+                    <td> <button onClick={()=> handleDelete} className="btn btn-accent btn-xs">Delete</button></td>
                   </tr>
                ) )
                }

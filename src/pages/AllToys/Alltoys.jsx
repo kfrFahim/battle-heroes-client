@@ -1,14 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Alltoys = () => {
   const [mytoys, setAllToys] = useState([]);
   const [searchText, setSearchText] = useState("");
+
+  const { user } = useContext(AuthContext);
 
   useEffect(() => {
     fetch("http://localhost:5000/alltoys")
       .then((res) => res.json())
       .then((data) => setAllToys(data));
   });
+
+  
 
   const handleSearch = () => {
     fetch(`http://localhost:5000/searchtoy/${searchText}`)
@@ -20,7 +25,7 @@ const Alltoys = () => {
 
   return (
     <div className="max-w-[1200px] mx-auto">
-      <h1 className="text-center text-3xl font-bold my-8">My Toys</h1>
+      <h1 className="text-center text-3xl font-bold my-8">All Toys</h1>
 
       <div className="w-[30%] mx-auto my-8">
         <input
@@ -45,21 +50,23 @@ const Alltoys = () => {
                     <input type="checkbox" className="checkbox" />
                   </label>
                 </th>
-                <th>Name</th>
-                <th>Email</th>
+                <th>Toy Name</th>
+                <th>Seller Name</th>
+                <th>Toy Category</th>
                 <th>Price</th>
                 <th>Quantity</th>
-                <th>Update</th>
-                <th>Delete</th>
+                
+                <th>View Details</th>
                 <th></th>
               </tr>
             </thead>
 
-            <tbody>
+            <tbody >
               {/* row 1 */}
-              {mytoys.map((mytoy) => (
-                <tr>
-                  <th>
+              {mytoys.map((mytoy) => ( 
+                
+              <tr>
+                  <th key={mytoy._id}>
                     <label>
                       <input type="checkbox" className="checkbox" />
                     </label>
@@ -79,18 +86,17 @@ const Alltoys = () => {
                       </div>
                     </div>
                   </td>
-                  <td>{mytoy.email}</td>
+                  <td>{mytoy.sellerName}</td>
+                  <td>{mytoy.subcategory}</td>
                   <td>{mytoy.price}</td>
                   <td>{mytoy.quantity}</td>
                   <td>
                     {" "}
-                    <button className="btn btn-secondary btn-xs">Update</button>
-                  </td>
-                  <td>
-                    {" "}
-                    <button className="btn btn-accent btn-xs">Delete</button>
+                    <button className="btn btn-accent btn-xs">Details</button>
                   </td>
                 </tr>
+
+              
               ))}
             </tbody>
           </table>

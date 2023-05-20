@@ -33,14 +33,14 @@ const AddToy = () => {
 <div className='grid grid-cols md:grid-cols-2 gap-5'>
 <input className='text-black font-semibold rounded shadow border border-gray-400 bg-gray-200  p-3' placeholder='Name' {...register("name")} />
       
-      <input className='text-black font-semibold rounded shadow border border-gray-400 bg-gray-200  p-3' value={user?.name} placeholder='Seller Name' defaultValue="" {...register("seller-name")} />
+      <input className='text-black font-semibold rounded shadow border border-gray-400 bg-gray-200  p-3' value={user?.name} placeholder='Seller Name' defaultValue="" {...register("sellerName")} />
 
       <input className='text-black font-semibold rounded shadow border border-gray-400 bg-gray-200  p-3' placeholder='Photo URL' defaultValue="" {...register("photoURL")} />
       
       {/* include validation with required or other standard HTML validation rules */}
       <input type='email' value={user?.email} className='text-black font-semibold rounded shadow border border-gray-400 bg-gray-200  p-3' placeholder='Email'   {...register("postedBy", { required: true })} />
 
-      <select className='text-black font-semibold rounded shadow border border-gray-400 bg-gray-200  p-3' placeholder='Toy Category' {...register("toy-category")}>
+      <select className='text-black font-semibold rounded shadow border border-gray-400 bg-gray-200  p-3' placeholder='Toy Category' {...register("subcategory")}>
         <option value="avengers">Avengers</option>
         <option value="marvel">Marvel</option>
         <option value="transformer">Transformer</option>
