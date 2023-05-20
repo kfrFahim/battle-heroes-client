@@ -6,8 +6,8 @@ const Review = () => {
   const [rating, setRating] = useState(5);
 
   return (
-    <div className="mx-16">
-      <h1 className="text-4xl text-center font-medium mt-[80px]">
+    <div className="max-w-[1200px] mx-auto py-5 bg-gray-50 p-4">
+      <h1 className="text-4xl text-center font-medium ">
         Check out what our customers are saying on Google!
       </h1>
       <hr className="w-48 h-1 mx-auto my-10 bg-black" />
@@ -39,8 +39,8 @@ const Review = () => {
         <div className="bg-white shadow p-3">
           <div className="flex justify-center mb-3">
             <img
-              className="w-6 h-6"
-              src="https://s3.romw-cdn.co/media/1/1422/14212885/conversions/ACB-R5Srvpid08d2VRPY0TZPCrsRc7HplejvishdGMm9fA=s240-c-c0x00000000-cc-rp-mo-br100-60px.png"
+              className="w-6 h-6 rounded-full"
+              src="https://static.generated.photos/vue-static/face-generator/landing/wall/14.jpg"
               alt=""
             />
             <div className="text-center">
@@ -62,8 +62,8 @@ const Review = () => {
         <div className="bg-white shadow p-3">
           <div className="flex justify-center mb-3">
             <img
-              className="w-6 h-6"
-              src="https://s3.romw-cdn.co/media/1/1422/14212885/conversions/ACB-R5Srvpid08d2VRPY0TZPCrsRc7HplejvishdGMm9fA=s240-c-c0x00000000-cc-rp-mo-br100-60px.png"
+              className="w-6 h-6 rounded-full"
+              src="https://static.generated.photos/vue-static/face-generator/landing/wall/21.jpg"
               alt=""
             />
             <div className="text-center">
@@ -85,8 +85,8 @@ const Review = () => {
         <div className="bg-white shadow p-3">
           <div className="flex justify-center mb-3">
             <img
-              className="w-6 h-6"
-              src="https://s3.romw-cdn.co/media/1/1422/14212885/conversions/ACB-R5Srvpid08d2VRPY0TZPCrsRc7HplejvishdGMm9fA=s240-c-c0x00000000-cc-rp-mo-br100-60px.png"
+              className="w-6 h-6 rounded-full"
+              src="https://static.generated.photos/vue-static/face-generator/landing/wall/3.jpg"
               alt=""
             />
             <div className="text-center">
