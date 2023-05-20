@@ -1,45 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
-
+import React, { useEffect, useState } from "react";
 
 const CategoryShop = () => {
+  const [allToys, setAllToys] = useState([]);
 
-     const [allToys , setAllToys] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/alltoys")
+      .then((res) => res.json())
+      .then((data) => setAllToys(data));
+  });
 
-     useEffect( () => {
-          fetch("http://localhost:5000/alltoys")
-          .then(res => res.json())
-          .then(data => setAllToys(data))
-     })
+  return (
+    <div>
+      <h1>Category = {allToys.length}</h1>
 
-     return (
-          <div className='max-w-[1200px] mx-auto'>
-               categoruy {allToys.length}
-
-               {
-                    allToys.map(alltoy => <>
-                      <Tabs>
-    <TabList>
-      <Tab>Title 1</Tab>
-      <Tab>Title 2</Tab>
-    </TabList>
-
-    <TabPanel>
-      <h2>Any content 1</h2>
-    </TabPanel>
-    <TabPanel>
-      <h2>Any content 2</h2>
-    </TabPanel>
-  </Tabs>
-                    </> )
-               }
-
-
-
-
-          </div>
-     );
+    </div>
+  );
 };
 
 export default CategoryShop;

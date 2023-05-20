@@ -11,13 +11,18 @@ import img9 from "../../../assets/images/gallery/img9.jpg";
 import img10 from "../../../assets/images/gallery/img10.jpg";
 import img11 from "../../../assets/images/gallery/img11.png";
 import img12 from "../../../assets/images/gallery/img12.jpg";
+import { FaAngleDown } from "react-icons/fa";
 
 const Gallery = () => {
   return (
     <div className="max-w-[1200px] mx-auto my-10">
      <div className="my-12">
-          <h1 className="text-5xl font-semibold text-black text-center my-4">Take a Look</h1>
+          <h1 className="text-2xl md:text-5xl font-semibold text-black text-center my-4">Take a look around</h1>
           <hr className="w-[10%] h-1 bg-black mx-auto" />
+
+          <div className="flex justify-center">
+          <FaAngleDown className="text-2xl"></FaAngleDown>
+          </div>
      </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
         <div>

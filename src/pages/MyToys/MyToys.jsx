@@ -19,6 +19,11 @@ const MyToys = () => {
           <div className='max-w-[1200px] mx-auto'>
                <h1 className='text-center text-3xl font-bold my-8'>My Toys</h1>
 
+<div className='w-[30%] mx-auto my-8'>
+<input className='px-8 py-3 border border-gray-200' type="text" placeholder='Search' />
+               <button className='btn'>Search</button>
+</div>
+
 
                <div >
                <div className="overflow-x-auto w-full">
