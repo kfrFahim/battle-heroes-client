@@ -1,8 +1,9 @@
 import React from "react";
+import { FaFacebookF, FaGoogle, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="max-w-[1200px] mx-auto bg-gray-300">
+    <div className="max-w-[1200px] mx-auto bg-gray-300 my-5">
       <div className="grid grid-cols md:grid-cols-4 p-5 text-black">
         <div className="flex gap-3 items-center">
           <img
@@ -32,18 +33,20 @@ const Footer = () => {
         </div>
         <div>
           <h3 className="text-xl font-semibold my-4">CONTACT</h3>
-          <p>101 Independence Avenue. S.E </p>
-          <p>Phone : +67 14874575</p>
-          <p>Email : battleheroes@gmail.com</p>
-          <div>
-            <ul>
-              <li>Google</li>
-              <li>Facebook</li>
-              <li>Tetter</li>
+          <p className="font-medium">101 Independence Avenue. S.E </p>
+          <p className="my-2 font-medium"><a href="#">Phone : +67 14874575</a></p>
+          <p className="font-medium">Email : <a href="#">battleheroes@gmail.com</a></p>
+          <div >
+            <ul className="flex gap-8 my-4">
+              <li className="text-2xl text-blue-700 hover:text-orange-500"> <FaFacebookF></FaFacebookF> </li>
+              <li className="text-2xl text-blue-900 hover:text-blue-700"><FaGoogle></FaGoogle></li>
+              <li  className="text-2xl text-sky-400 hover:text-blue-700"><FaTwitter></FaTwitter></li>
             </ul>
           </div>
         </div>
       </div>
+      <hr />
+      <p className="text-center py-4">THE BATTLEHEROES TOY STORE © 2023 </p>
     </div>
   );
 };
