@@ -22,6 +22,8 @@ const MyToys = () => {
             .then(res => res.json())
             .then(data => {
               console.log(data);
+              const remaining = mytoys.filter(mytoy => mytoy._id !== id);
+              setMytoys(remaining)
             })
           }
       }
@@ -75,7 +77,7 @@ const MyToys = () => {
                       <div className="flex items-center space-x-3">
                         <div className="avatar">
                           <div className="mask mask-squircle w-12 h-12">
-                            <img src={mytoy?.photoURL} alt="Avatar Tailwind CSS Component" />
+                            <img src={mytoy?.image} alt="Avatar Tailwind CSS Component" />
                           </div>
                         </div>
                         <div>
@@ -89,7 +91,7 @@ const MyToys = () => {
                     <td>{mytoy.price}</td>
                     <td>{mytoy.quantity}</td>
                     <td> <button className="btn btn-secondary btn-xs">Update</button></td>
-                    <td> <button onClick={()=> handleDelete} className="btn btn-accent btn-xs">Delete</button></td>
+                    <td> <button onClick={()=> handleDelete(mytoy._id)} className="btn btn-accent btn-xs">Delete</button></td>
                   </tr>
                ) )
                }

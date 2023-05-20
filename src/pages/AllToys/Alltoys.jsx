@@ -65,8 +65,8 @@ const Alltoys = () => {
               {/* row 1 */}
               {mytoys.map((mytoy) => ( 
                 
-              <tr>
-                  <th key={mytoy._id}>
+              <tr key={mytoy._id}>
+                  <th >
                     <label>
                       <input type="checkbox" className="checkbox" />
                     </label>
@@ -76,7 +76,7 @@ const Alltoys = () => {
                       <div className="avatar">
                         <div className="mask mask-squircle w-12 h-12">
                           <img
-                            src={mytoy.image}
+                            src={ mytoy.image}
                             alt="Avatar Tailwind CSS Component"
                           />
                         </div>

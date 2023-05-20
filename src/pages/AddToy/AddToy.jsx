@@ -19,6 +19,8 @@ const AddToy = () => {
           })
           .then(res => res.json())
           .then(result => console.log(result) )
+          form.reset("");
+          alert("Submitted")
           
           console.log(data);
      };
@@ -35,16 +37,16 @@ const AddToy = () => {
       
       <input className='text-black font-semibold rounded shadow border border-gray-400 bg-gray-200  p-3' value={user?.name} placeholder='Seller Name' defaultValue="" {...register("sellerName")} />
 
-      <input className='text-black font-semibold rounded shadow border border-gray-400 bg-gray-200  p-3' placeholder='Photo URL' defaultValue="" {...register("photoURL")} />
+      <input className='text-black font-semibold rounded shadow border border-gray-400 bg-gray-200  p-3' placeholder='Photo URL' defaultValue="" {...register("image")} />
       
       {/* include validation with required or other standard HTML validation rules */}
       <input type='email' value={user?.email} className='text-black font-semibold rounded shadow border border-gray-400 bg-gray-200  p-3' placeholder='Email'   {...register("postedBy", { required: true })} />
 
       <select className='text-black font-semibold rounded shadow border border-gray-400 bg-gray-200  p-3' placeholder='Toy Category' {...register("subcategory")}>
-        <option value="avengers">Avengers</option>
-        <option value="marvel">Marvel</option>
-        <option value="transformer">Transformer</option>
-        <option value="star-wars">Star Wars</option>
+        <option value="Avengers">Avengers</option>
+        <option value="Marvel">Marvel</option>
+        <option value="Transformer">Transformer</option>
+        <option value="Star Wars">Star Wars</option>
       </select>
 
       <input className='text-black font-semibold rounded shadow border border-gray-400 bg-gray-200 p-3' placeholder='Price' defaultValue="" {...register("price")} />    
