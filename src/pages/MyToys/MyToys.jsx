@@ -91,7 +91,7 @@ const MyToys = () => {
                     </td>
                     <td>{mytoy.price}</td>
                     <td>{mytoy.quantity}</td>
-                    <td> <Link to={`/update/${mytoy._id}`}><button className="btn btn-secondary btn-xs">Update</button></Link></td>
+                    <td> <Link to={`/updatetoy/${mytoy._id}`} ><button className="btn btn-secondary btn-xs">Update</button></Link></td>
                     <td> <button onClick={()=> handleDelete(mytoy._id)} className="btn btn-accent btn-xs">Delete</button></td>
                   </tr>
                ) )

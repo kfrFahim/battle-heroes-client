@@ -73,7 +73,14 @@ const Navbar = () => {
           <button className="btn btn-outline btn-primary ">
             <Link to="/login">Login</Link>
           </button>
+          
         )}
+        {user?.photoURL ? (
+              <img className="w-10 h-10" src={user.photoURL} title={user.displayName} />
+            ) : (
+              ""
+            )}
+          
 
         {/* Resposive Menu */}
 
@@ -93,3 +100,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+

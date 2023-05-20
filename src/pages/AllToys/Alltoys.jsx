@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { Link } from "react-router-dom";
 
 const Alltoys = () => {
   const [mytoys, setAllToys] = useState([]);
@@ -63,7 +64,7 @@ const Alltoys = () => {
 
             <tbody >
               {/* row 1 */}
-              {mytoys.map((mytoy) => ( 
+              {mytoys.slice(0,20).map((mytoy) => ( 
                 
               <tr key={mytoy._id}
               mytoy={mytoy}>
@@ -93,7 +94,7 @@ const Alltoys = () => {
                   <td>{mytoy.quantity}</td>
                   <td>
                     {" "}
-                    <button className="btn btn-accent btn-xs">Details</button>
+                    <Link to={`/toydetails/${mytoy._id}`}><button className="btn btn-accent btn-xs">Details</button></Link>
                   </td>
                 </tr>
 

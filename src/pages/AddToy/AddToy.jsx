@@ -6,7 +6,7 @@ const AddToy = () => {
 
      const {user} = useContext(AuthContext);
 
-     const { register, handleSubmit, watch, formState: { errors } } = useForm();
+     const { register, handleSubmit, watch,  formState: { errors } } = useForm();
 
 
      const onSubmit = data => {
@@ -20,11 +20,12 @@ const AddToy = () => {
           .then(res => res.json())
           .then(result => console.log(result) )
           form.reset("");
-          alert("Submitted")
           
           console.log(data);
      };
 
+
+    
      return (
           <div className='max-w-[1200px] mx-auto'>
                <h1>Add a toy</h1>
