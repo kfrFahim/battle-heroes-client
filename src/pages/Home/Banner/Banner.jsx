@@ -23,8 +23,7 @@ const Banner = () => {
                 Find articulated, highly detailed Toys of heroes and villains
               </p>
               <p className="text-white md:text-4xl font-semibold ">
-                THE
-                <Typed
+                THE <Typed
                   strings={[" MULTIVERSE NOW IN STOCK"]}
                   typeSpeed={100}
                   backSpeed={50}
@@ -146,7 +145,7 @@ const Banner = () => {
               <p className="text-white md:text-4xl font-semibold ">
                 THE
                 <Typed
-                  strings={[' MARVEL"S NOW IN STOCK']}
+                  strings={[' MARVEL NOW IN STOCK']}
                   typeSpeed={100}
                   backSpeed={50}
                   loop={true}

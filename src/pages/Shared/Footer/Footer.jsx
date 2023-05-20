@@ -17,23 +17,23 @@ const Footer = () => {
           <h3 className="text-xl font-semibold my-5">BRANDS</h3>
           <ul>
             <li>Avengers</li>
-            <li>Transformers</li>
+            <li className="py-2">Transformers</li>
             <li>Marvel</li>
-            <li>Star Wars</li>
+            <li className="py-2">Star Wars</li>
           </ul>
         </div>
         <div>
           <h3 className="text-xl font-semibold my-5">ABOUT US</h3>
           <ul>
             <li>Help Center</li>
-            <li>Store Location</li>
+            <li className="py-2">Store Location</li>
             <li>Privacy Policy</li>
-            <li>Terms of Service</li>
+            <li className="py-2">Terms of Service</li>
           </ul>
         </div>
         <div>
           <h3 className="text-xl font-semibold my-4">CONTACT</h3>
-          <p className="font-medium">101 Independence Avenue. S.E </p>
+          <p >101 Independence Avenue. S.E </p>
           <p className="my-2 font-medium"><a href="#">Phone : +67 14874575</a></p>
           <p className="font-medium">Email : <a href="#">battleheroes@gmail.com</a></p>
           <div >
