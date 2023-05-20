@@ -3,7 +3,9 @@ import { useForm } from "react-hook-form";
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 
-const UpdateToy = () => {
+const UpdateToy = ({mytoy}) => {
+
+     console.log(mytoy)
 
      const updateToy = useLoaderData()
 
@@ -17,7 +19,7 @@ const UpdateToy = () => {
 
      const onSubmit = data => {
           fetch(`http://localhost:5000/addtoy${_id}`,{
-               method:"PUT",
+               method:"PATCH",
                headers: {
                     "content-type" : "application/json"
                },
@@ -45,7 +47,7 @@ const UpdateToy = () => {
 <div className='grid grid-cols md:grid-cols-2 gap-5'>
 <input className='text-black font-semibold rounded shadow border border-gray-400 bg-gray-200  p-3'  placeholder='Name' {...register("name")}  />
       
-      <input className='text-black font-semibold rounded shadow border border-gray-400 bg-gray-200  p-3' value={user?.name} placeholder='Seller Name' defaultValue="" {...register("sellerName")} />
+      <input className='text-black font-semibold rounded shadow border border-gray-400 bg-gray-200  p-3' value={user?.name} placeholder='Seller Name' defaultValue={mytoy.sellerName} {...register("sellerName")} />
 
       <input className='text-black font-semibold rounded shadow border border-gray-400 bg-gray-200  p-3' placeholder='Photo URL' defaultValue="" {...register("image")} />
       

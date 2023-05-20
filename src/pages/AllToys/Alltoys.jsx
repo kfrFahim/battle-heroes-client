@@ -65,7 +65,8 @@ const Alltoys = () => {
               {/* row 1 */}
               {mytoys.map((mytoy) => ( 
                 
-              <tr key={mytoy._id}>
+              <tr key={mytoy._id}
+              mytoy={mytoy}>
                   <th >
                     <label>
                       <input type="checkbox" className="checkbox" />
