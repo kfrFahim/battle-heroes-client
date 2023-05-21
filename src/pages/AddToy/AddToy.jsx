@@ -113,7 +113,7 @@ const AddToy = () => {
           </div>
 
           <div className="flex justify-center">
-            <input
+          <input
               className="btn bg-blue-300 text-black px-8 py-3 my-6"
               type="submit"
               
