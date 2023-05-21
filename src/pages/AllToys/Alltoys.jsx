@@ -9,15 +9,15 @@ const Alltoys = () => {
   const { user } = useContext(AuthContext);
 
   useEffect(() => {
-    fetch("http://localhost:5000/alltoys")
+    fetch("https://battle-heroes-server-kfrfahim.vercel.app/alltoys")
       .then((res) => res.json())
       .then((data) => setAllToys(data));
   });
 
-  
-
   const handleSearch = () => {
-    fetch(`http://localhost:5000/searchtoy/${searchText}`)
+    fetch(
+      `https://battle-heroes-server-kfrfahim.vercel.app/searchtoy/${searchText}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setSearchText(data);
@@ -56,19 +56,17 @@ const Alltoys = () => {
                 <th>Toy Category</th>
                 <th>Price</th>
                 <th>Quantity</th>
-                
+
                 <th>View Details</th>
                 <th></th>
               </tr>
             </thead>
 
-            <tbody >
+            <tbody>
               {/* row 1 */}
-              {mytoys.slice(0,20).map((mytoy) => ( 
-                
-              <tr key={mytoy._id}
-              mytoy={mytoy}>
-                  <th >
+              {mytoys.slice(0, 20).map((mytoy) => (
+                <tr key={mytoy._id} mytoy={mytoy}>
+                  <th>
                     <label>
                       <input type="checkbox" className="checkbox" />
                     </label>
@@ -78,7 +76,7 @@ const Alltoys = () => {
                       <div className="avatar">
                         <div className="mask mask-squircle w-12 h-12">
                           <img
-                            src={ mytoy.image}
+                            src={mytoy.image}
                             alt="Avatar Tailwind CSS Component"
                           />
                         </div>
@@ -94,11 +92,11 @@ const Alltoys = () => {
                   <td>{mytoy.quantity}</td>
                   <td>
                     {" "}
-                    <Link to={`/toydetails/${mytoy._id}`}><button className="btn btn-accent btn-xs">Details</button></Link>
+                    <Link to={`/toydetails/${mytoy._id}`}>
+                      <button className="btn btn-accent btn-xs">Details</button>
+                    </Link>
                   </td>
                 </tr>
-
-              
               ))}
             </tbody>
           </table>

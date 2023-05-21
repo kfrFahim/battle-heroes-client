@@ -10,52 +10,71 @@ import PrivateRoute from "./PrivateRoute";
 import Error from "../pages/Error/Error";
 import UpdateToy from "../pages/UpdateToy/UpdateToy";
 import ToyDetails from "../pages/ToyDetails/ToyDetails";
+import Blog from "../pages/Blog/Blog";
 
 const router = createBrowserRouter([
-     {
-          path:"/",
-          element:<Main></Main>,
-          children:[
-               {
-                    path:"/",
-                    element:<Home></Home>
-               },
-               {
-                    path:"/alltoys",
-                    element:<Alltoys></Alltoys>
-               },
-               {
-                    path:"/mytoys",
-                    element:<PrivateRoute><MyToys></MyToys></PrivateRoute>
-               },
-               {
-                    path:"/addtoy",
-                    element:<PrivateRoute><AddToy></AddToy></PrivateRoute>
-               }
-          ]
-     },
-     {
-          path:"/login",
-          element:<Login></Login>
-     },
-     {
-          path:"/signup",
-          element:<SignUp></SignUp>
-     },
-     {
-          path:"/updatetoy/:id",
-          element:<UpdateToy></UpdateToy>,
-          loader:({params})=> fetch(`http://localhost:5000/update/${params.id}`)
-     },
-     {
-          path:"/toydetails/:id",
-          element:<PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>
-          
-     },
-     {
-          path:"*",
-          element:<Error></Error>
-     }
-])
+  {
+    path: "/",
+    element: <Main></Main>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "/alltoys",
+        element: <Alltoys></Alltoys>,
+      },
+      {
+        path: "/mytoys",
+        element: (
+          <PrivateRoute>
+            <MyToys></MyToys>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/addtoy",
+        element: (
+          <PrivateRoute>
+            <AddToy></AddToy>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path:"/blog",
+        element:<Blog></Blog>
+      }
+    ],
+  },
+  {
+    path: "/login",
+    element: <Login></Login>,
+  },
+  {
+    path: "/signup",
+    element: <SignUp></SignUp>,
+  },
+  {
+    path: "/updatetoy/:id",
+    element: <UpdateToy></UpdateToy>,
+    loader: ({ params }) =>
+      fetch(
+        `https://battle-heroes-server-kfrfahim.vercel.app/update/${params.id}`
+      ),
+  },
+  {
+    path: "/toydetails/:id",
+    element: (
+      <PrivateRoute>
+        <ToyDetails></ToyDetails>
+      </PrivateRoute>
+    ),
+  },
+  {
+    path: "*",
+    element: <Error></Error>,
+  },
+]);
 
 export default router;
