@@ -40,7 +40,7 @@ const AddToy = () => {
 
   return (
     <div className="max-w-[1200px] mx-auto">
-      <h1>Add a toy</h1>
+      <h1 className="text-3xl text-center my-5 font-bold">Add a toy</h1>
 
       <div className="shadow-xl p-5 my-8">
         <form onSubmit={handleSubmit(onSubmit)}>
