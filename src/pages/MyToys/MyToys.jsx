@@ -1,10 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { Link } from "react-router-dom";
+import useTtile from "../../hooks/useTitle";
 
 const MyToys = () => {
   const { user } = useContext(AuthContext);
   const [mytoys, setMytoys] = useState([]);
+
+  useTtile("My Toys")
 
   useEffect(() => {
     fetch(

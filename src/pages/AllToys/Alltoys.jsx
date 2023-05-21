@@ -1,12 +1,15 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { Link } from "react-router-dom";
+import useTtile from "../../hooks/useTitle";
 
 const Alltoys = () => {
   const [mytoys, setAllToys] = useState([]);
   const [searchText, setSearchText] = useState("");
 
   const { user } = useContext(AuthContext);
+
+  useTtile("All Toys")
 
   useEffect(() => {
     fetch("https://battle-heroes-server-kfrfahim.vercel.app/alltoys")
@@ -20,7 +23,7 @@ const Alltoys = () => {
     )
       .then((res) => res.json())
       .then((data) => {
-        setSearchText(data);
+        setAllToys(data);
       });
   };
 

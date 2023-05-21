@@ -9,6 +9,7 @@ import {
     signInWithPopup,
   } from "firebase/auth";
 import app from '../../Firebase/firebase.config';
+import useTtile from '../../hooks/useTitle';
 
 
 const Login = () => {
@@ -19,6 +20,8 @@ const Login = () => {
     const provider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
     const navigate = useNavigate();
+
+    useTtile("Login")
 
     const location = useLocation();
     const from = location.state?.from?.pathname || "/";

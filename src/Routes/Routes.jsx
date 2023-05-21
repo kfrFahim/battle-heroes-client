@@ -70,6 +70,7 @@ const router = createBrowserRouter([
         <ToyDetails></ToyDetails>
       </PrivateRoute>
     ),
+    loader: ({params}) => fetch(`https://battle-heroes-server-kfrfahim.vercel.app/${params.id}`)
   },
   {
     path: "*",
