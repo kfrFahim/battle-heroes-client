@@ -1,12 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Review = () => {
   const [rating, setRating] = useState(5);
 
+  useEffect(()=> {
+    AOS.init();
+},[])
+
   return (
-    <div className="max-w-[1200px] mx-auto py-5 bg-gray-50 p-4">
+    <div className="max-w-[1200px] mx-auto py-5 bg-gray-50 p-4" data-aos="fade-left">
       <h1 className="text-4xl text-center font-medium ">
         Check out what our customers are saying on Google!
       </h1>
@@ -82,7 +88,7 @@ const Review = () => {
           </p>
         </div>
 
-        <div className="bg-white shadow p-3">
+        <div className="bg-white shadow p-3" data-aos="fade-right">
           <div className="flex justify-center mb-3">
             <img
               className="w-6 h-6 rounded-full"

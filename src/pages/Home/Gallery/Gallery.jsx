@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import img1 from "../../../assets/images/gallery/img1.jpg";
 import img2 from "../../../assets/images/gallery/img2.jpg";
 import img3 from "../../../assets/images/gallery/img3.jpg";
@@ -12,8 +12,15 @@ import img10 from "../../../assets/images/gallery/img10.jpg";
 import img11 from "../../../assets/images/gallery/img11.png";
 import img12 from "../../../assets/images/gallery/img12.jpg";
 import { FaAngleDown } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Gallery = () => {
+
+  useEffect(()=> {
+    AOS.init();
+},[])
+
   return (
     <div className="max-w-[1200px] mx-auto my-10">
      <div className="my-12">
@@ -40,6 +47,7 @@ const Gallery = () => {
             className="w-[250px] h-[250px] mx-auto border-4 border-green-400 rounded-md"
             src={img2}
             alt=""
+            data-aos="fade-right"
           />
           <p className="text-center text-[18px] text-green-900 font-semibold my-1">Transformer</p>
         </div>
@@ -70,6 +78,7 @@ const Gallery = () => {
             className="w-[250px] h-[250px] mx-auto border-4 border-green-400 rounded-md"
             src={img5}
             alt=""
+            data-aos="fade-left"
           />
           <p className="text-center text-[18px] text-green-900 font-semibold my-1">Transformer</p>
         </div>
@@ -79,6 +88,7 @@ const Gallery = () => {
             className="w-[250px] h-[250px] mx-auto border-4 border-green-400 rounded-md"
             src={img6}
             alt=""
+            data-aos="fade-right"
           />
           <p className="text-center text-[18px] text-green-900 font-semibold my-1">Star Wars</p>
         </div>
@@ -89,6 +99,7 @@ const Gallery = () => {
             className="w-[250px] h-[250px] mx-auto border-4 border-green-400 rounded-md"
             src={img7}
             alt=""
+            data-aos="fade-left"
           />
           <p className="text-center text-[18px] text-green-900 font-semibold my-1">Marvel</p>
         </div>
@@ -99,6 +110,7 @@ const Gallery = () => {
             className="w-[250px] h-[250px] mx-auto border-4 border-green-400 rounded-md"
             src={img8}
             alt=""
+            data-aos="fade-left"
           />
           <p className="text-center text-[18px] text-green-900 font-semibold my-1">Transformer</p>
         </div>
@@ -109,6 +121,7 @@ const Gallery = () => {
             className="w-[250px] h-[250px] mx-auto border-4 border-green-400 rounded-md"
             src={img9}
             alt=""
+            data-aos="fade-left"
           />
           <p className="text-center text-[18px] text-green-900 font-semibold my-1">Star Wars</p>
         </div>
@@ -118,6 +131,7 @@ const Gallery = () => {
             className="w-[250px] h-[250px] mx-auto border-4 border-green-400 rounded-md"
             src={img10}
             alt=""
+            data-aos="fade-right"
           />
           <p className="text-center text-[18px] text-green-900 font-semibold my-1">Star Wars</p>
         </div>
@@ -127,6 +141,7 @@ const Gallery = () => {
             className="w-[250px] h-[250px] mx-auto border-4 border-green-400 rounded-md"
             src={img11}
             alt=""
+            data-aos="fade-left"
           />
           <p className="text-center text-[18px] text-green-900 font-semibold my-1">Avengers</p>
         </div>
