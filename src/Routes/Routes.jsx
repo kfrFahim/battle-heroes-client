@@ -58,10 +58,7 @@ const router = createBrowserRouter([
   {
     path: "/updatetoy/:id",
     element: <UpdateToy></UpdateToy>,
-    loader: ({ params }) =>
-      fetch(
-        `https://battle-heroes-server-kfrfahim.vercel.app/update/${params.id}`
-      ),
+    loader: ({params}) =>  fetch(`https://battle-heroes-server-kfrfahim.vercel.app/toy/${params.id}`)
   },
   {
     path: "/toydetails/:id",

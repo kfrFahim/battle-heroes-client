@@ -2,11 +2,15 @@ import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Providers/AuthProvider";
 import useTtile from "../../hooks/useTitle";
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const AddToy = () => {
   const { user } = useContext(AuthContext);
 
   useTtile("Add a toy")
+
+  const notify = () => toast("Added Successfully");
 
   const {
     register,
@@ -116,8 +120,10 @@ const AddToy = () => {
           <input
               className="btn bg-blue-300 text-black px-8 py-3 my-6"
               type="submit"
+              onClick={notify}
               
             />
+            <ToastContainer />
           </div>
         </form>
       </div>

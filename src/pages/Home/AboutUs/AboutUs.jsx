@@ -1,12 +1,17 @@
 import React from 'react';
+import { FaAngleDown } from "react-icons/fa";
 
 const AboutUs = () => {
      return (
           <div className='max-w-[1200px] mx-auto my-8 '>
 
 <div className="my-12">
-          <h1 className="text-5xl font-semibold text-black text-center my-4">About BattleHeroes</h1>
+          <h1 className="text-2xl md:text-5xl font-semibold text-black text-center my-4">About BattleHeroes</h1>
           <hr className="w-[10%] h-1 bg-black mx-auto" />
+
+          <div className="flex justify-center">
+          <FaAngleDown className="text-2xl"></FaAngleDown>
+          </div>
      </div>
 
                <div className='grid grid-cols md:grid-cols-2 gap-5 p-5 bg-gray-200'>
